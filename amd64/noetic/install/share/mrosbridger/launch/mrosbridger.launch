@@ -1,0 +1,25 @@
+<launch>
+  <arg name="bridge_ros_queue_size" default="100" />
+  <arg name="bridge_mros2ros" default="1" />
+  <arg name="bridge_ros2mros" default="0" />
+  <arg name="reliable" default="0" />
+  <arg name="latch" default="0" />
+  
+  <!-- Execlude topics, topics are separated by ";" -->
+  <arg name="mros2ros_execlude" default="" />
+  <arg name="ros2mros_execlude" default="" />
+  <arg name="mros2ros_include" default="" />
+  <arg name="ros2mros_include" default="" />
+
+  <node pkg="mrosbridger" type="mrosbridger" name="mrosbridger" output="screen">
+    <param name="bridge_ros_queue_size" value="$(arg bridge_ros_queue_size)" />
+    <param name="bridge_mros2ros" value="$(arg bridge_mros2ros)" />
+    <param name="bridge_ros2mros" value="$(arg bridge_ros2mros)" />
+    <param name="mros2ros_execlude" value="$(arg mros2ros_execlude)" />
+    <param name="ros2mros_execlude" value="$(arg ros2mros_execlude)" />
+    <param name="mros2ros_include" value="$(arg mros2ros_include)" />
+    <param name="ros2mros_include" value="$(arg ros2mros_include)" />
+    <param name="reliable" value="$(arg reliable)" />
+    <param name="latch" value="$(arg latch)" />
+  </node>
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/limx/workspace/mros/src/tools/mrosbridger/install
+
+Name: mrosbridger
+Description: Description of mrosbridger
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp topic_tools

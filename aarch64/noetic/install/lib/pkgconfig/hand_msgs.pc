@@ -1,0 +1,8 @@
+prefix=/home/limx/workspace/mros/src/tools/mrosbridger/install
+
+Name: hand_msgs
+Description: Description of hand_msgs
+Version: 1.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 
