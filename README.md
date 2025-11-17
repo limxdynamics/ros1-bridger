@@ -6,12 +6,12 @@
 
 #### 1. Environment Preparation
 
-- **Operating System Requirement**: Ensure the local device runs **Ubuntu 20.04 LTS** (x86_64 or aarch64 architecture).
-- **ROS Version**: **ROS Noetic** must be installed. For installation, refer to the [official ROS Noetic installation guide](http://wiki.ros.org/noetic/Installation/Ubuntu).
+- Operating System Requirement: Ensure the local device runs Ubuntu 20.04 LTS (x86_64 or aarch64 architecture).
+- ROS Version: ROS Noetic must be installed. For installation, refer to the [official ROS Noetic installation guide](http://wiki.ros.org/noetic/Installation/Ubuntu).
 
 #### 2. Network Connection and Verification
 
-- **Connect to the Robot Network**: Access the robot's  local area network via wired or wireless connection (ensure it is on the same network segment as the target device).
+- Connect to the Robot Network: Access the robot's  local area network via wired or wireless connection (ensure it is on the same network segment as the target device).
 
 - Network Connectivity Test
 
@@ -20,12 +20,19 @@
   ping 10.192.1.2
   ```
 
-#### 3. Configure ros1_bridger Connection Parameters
-
-- Set the ros1_bridger address (IP of the robot):
+- Adjust network buffer (improve communication performance):
 
   ```
-  export MROS_AGENT_URI=tcp://10.192.1.2
+  echo -e "net.core.wmem_max=12582912\nnet.core.rmem_max=12582912" | sudo tee -a /etc/sysctl.conf
+  sudo sysctl -p
+  ```
+
+#### 3. Configure ros1_bridger Connection Parameters
+
+- Set the ros1_bridger communication address:
+
+  ```
+  export MROS_IP_LIST=10.192.1.x
   ```
 
 #### 4. Launch ros1_bridger

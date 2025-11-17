@@ -1,0 +1,8 @@
+prefix=/home/limx/workspace/mros/src/tools/mrosbridger/install
+
+Name: tron2_manipulation
+Description: Description of tron2_manipulation
+Version: 1.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

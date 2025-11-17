@@ -6,14 +6,14 @@
 
 #### 1. 环境准备
 
-- **操作系统要求**：确保本地设备运行 **Ubuntu 20.04 LTS**（x86_64 或 aarch64 架构）
-- **ROS 版本**：已安装 **ROS Noetic**（若未安装，参考 [ROS Noetic 官方安装指南](http://wiki.ros.org/noetic/Installation/Ubuntu)）
+- 操作系统要求：确保本地设备运行 **Ubuntu 20.04 LTS**（x86_64 或 aarch64 架构）
+- ROS 版本：已安装 **ROS Noetic**（若未安装，参考 [ROS Noetic 官方安装指南](http://wiki.ros.org/noetic/Installation/Ubuntu)）
 
 #### 2. 网络连接与验证
 
-- **连接机器人网络**：通过有线或无线方式接入机器人所在局域网（确保与目标设备在同一网段）
+- 连接机器人网络：通过有线或无线方式接入机器人所在局域网（确保与目标设备在同一网段）
 
-- **网络连通性测试**：
+- 网络连通性测试：
 
   ```
   # 测试与目标设备（10.192.1.2）的连通性
@@ -21,12 +21,19 @@
   
   ```
 
-#### 3. 配置 ros1_bridger 连接参数
-
-- 设置ros1 bridger地址（机器人的 IP）：
+- 调整网络缓冲区（提升通信性能）：
 
   ```
-  export MROS_AGENT_URI=tcp://10.192.1.2
+  echo -e "net.core.wmem_max=12582912\nnet.core.rmem_max=12582912" | sudo tee -a /etc/sysctl.conf
+  sudo sysctl -p
+  ```
+
+#### 3. 配置 ros1_bridger 连接参数
+
+- 设置ros1 bridger通信地址：
+
+  ```
+  export MROS_IP_LIST=10.192.1.x
   ```
 
 #### 4. 启动 ros1_bridger
