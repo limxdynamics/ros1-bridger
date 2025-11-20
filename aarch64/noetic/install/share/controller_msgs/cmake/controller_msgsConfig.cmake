@@ -67,7 +67,7 @@ set(controller_msgs_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(controller_msgs_SOURCE_PREFIX /home/limx/workspace/mros/src/tools/mrosbridger/src/msgs/controller_msgs)
+  set(controller_msgs_SOURCE_PREFIX /home/limx/workspace/mros/src/tools/mrosbridger/src/ros1/msgs/controller_msgs)
   set(controller_msgs_DEVEL_PREFIX /home/limx/workspace/mros/src/tools/mrosbridger/devel)
   set(controller_msgs_INSTALL_PREFIX "")
   set(controller_msgs_PREFIX ${controller_msgs_DEVEL_PREFIX})

@@ -67,7 +67,7 @@ set(upper_body_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(upper_body_SOURCE_PREFIX /home/limx/workspace/mros/src/tools/mrosbridger/src/msgs/upper_body)
+  set(upper_body_SOURCE_PREFIX /home/limx/workspace/mros/src/tools/mrosbridger/src/ros1/msgs/upper_body)
   set(upper_body_DEVEL_PREFIX /home/limx/workspace/mros/src/tools/mrosbridger/devel)
   set(upper_body_INSTALL_PREFIX "")
   set(upper_body_PREFIX ${upper_body_DEVEL_PREFIX})

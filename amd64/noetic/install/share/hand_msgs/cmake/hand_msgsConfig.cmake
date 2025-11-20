@@ -67,7 +67,7 @@ set(hand_msgs_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(hand_msgs_SOURCE_PREFIX /home/limx/workspace/mros/src/tools/mrosbridger/src/msgs/hand_msgs)
+  set(hand_msgs_SOURCE_PREFIX /home/limx/workspace/mros/src/tools/mrosbridger/src/ros1/msgs/hand_msgs)
   set(hand_msgs_DEVEL_PREFIX /home/limx/workspace/mros/src/tools/mrosbridger/devel)
   set(hand_msgs_INSTALL_PREFIX "")
   set(hand_msgs_PREFIX ${hand_msgs_DEVEL_PREFIX})

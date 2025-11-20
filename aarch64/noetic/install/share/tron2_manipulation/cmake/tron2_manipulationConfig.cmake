@@ -67,7 +67,7 @@ set(tron2_manipulation_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(tron2_manipulation_SOURCE_PREFIX /home/limx/workspace/mros/src/tools/mrosbridger/src/msgs/tron2_manipulation)
+  set(tron2_manipulation_SOURCE_PREFIX /home/limx/workspace/mros/src/tools/mrosbridger/src/ros1/msgs/tron2_manipulation)
   set(tron2_manipulation_DEVEL_PREFIX /home/limx/workspace/mros/src/tools/mrosbridger/devel)
   set(tron2_manipulation_INSTALL_PREFIX "")
   set(tron2_manipulation_PREFIX ${tron2_manipulation_DEVEL_PREFIX})
