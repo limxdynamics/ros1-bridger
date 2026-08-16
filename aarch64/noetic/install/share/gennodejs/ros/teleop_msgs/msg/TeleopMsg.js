@@ -12,8 +12,8 @@ const _arrayDeserializer = _deserializer.Array;
 const _finder = _ros_msg_utils.Find;
 const _getByteLength = _ros_msg_utils.getByteLength;
 let KeyPoint = require('./KeyPoint.js');
-let controller_msgs = _finder('controller_msgs');
 let geometry_msgs = _finder('geometry_msgs');
+let controller_msgs = _finder('controller_msgs');
 let std_msgs = _finder('std_msgs');
 
 //-----------------------------------------------------------

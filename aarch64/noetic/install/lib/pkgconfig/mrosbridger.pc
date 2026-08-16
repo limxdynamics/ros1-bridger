@@ -5,4 +5,4 @@ Description: Description of mrosbridger
 Version: 1.0.0
 Cflags: 
 Libs: -L${prefix}/lib 
-Requires: roscpp topic_tools
+Requires: actionlib actionlib_msgs roscpp std_msgs std_srvs topic_tools

@@ -4,8 +4,9 @@
   <arg name="bridge_ros2mros" default="0" />
   <arg name="reliable" default="0" />
   <arg name="latch" default="0" />
+  <arg name="service_timeout" default="20.0" />
   
-  <!-- Execlude topics, topics are separated by ";" -->
+  <!-- Execlude/include topics, services and actions. Names are separated by ";" -->
   <arg name="mros2ros_execlude" default="" />
   <arg name="ros2mros_execlude" default="" />
   <arg name="mros2ros_include" default="" />
@@ -15,6 +16,7 @@
     <param name="bridge_ros_queue_size" value="$(arg bridge_ros_queue_size)" />
     <param name="bridge_mros2ros" value="$(arg bridge_mros2ros)" />
     <param name="bridge_ros2mros" value="$(arg bridge_ros2mros)" />
+    <param name="service_timeout" value="$(arg service_timeout)" />
     <param name="mros2ros_execlude" value="$(arg mros2ros_execlude)" />
     <param name="ros2mros_execlude" value="$(arg ros2mros_execlude)" />
     <param name="mros2ros_include" value="$(arg mros2ros_include)" />

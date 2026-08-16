@@ -187,7 +187,7 @@ foreach(t ${mrosbridger_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "roscpp;topic_tools")
+set(depends "actionlib;actionlib_msgs;roscpp;std_msgs;std_srvs;topic_tools")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
