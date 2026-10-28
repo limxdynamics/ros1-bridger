@@ -1,6 +1,6 @@
-# 中文 | [English](README.md)
-
-
+<p align="center">
+  <a href="README.md">English</a> | <b>中文</b>
+</p>
 
 # ros1_bridger 完整使用步骤
 
